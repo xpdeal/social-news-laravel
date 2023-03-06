@@ -10,7 +10,7 @@ class PostObserver
 {
     public function creating(Post $post): void
     {
-        $post->slug = Str::slug($post);
+        $post->slug = Str::slug($post->title);
         $post->uuid = Str::uuid();
         $post->user_id = Auth::id();
     }
