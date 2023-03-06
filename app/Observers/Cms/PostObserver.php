@@ -3,7 +3,7 @@
 namespace App\Observers\Cms;
 
 use App\Models\Cms\Post;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class PostObserver

@@ -8,4 +8,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('posts', [PostController::class, 'index']);
 
 // só para testes
-Route::get('new-post', [DashPostController::class, 'index']);
+Route::get('new-post', [DashPostController::class, 'index'])->name('dash.posts');
+Route::post('new-post', [DashPostController::class, 'store'])->name('cms.post.store');
