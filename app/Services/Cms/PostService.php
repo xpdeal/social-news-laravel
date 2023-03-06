@@ -10,6 +10,7 @@ class PostService implements PostInterface
     public static function featured(int $limit = self::DEFAULT_LIMIT): array
     {
         $all_featured = PostRepository::getFeaturedPosts();
+
         return [];
     }
 }

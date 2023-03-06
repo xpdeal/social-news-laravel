@@ -22,11 +22,11 @@ class Post extends Model
         'post_content',
         'metadata',
         'published_at',
-        'slug'
+        'slug',
     ];
 
     protected $casts = [
         'metadata' => 'array',
-        'published_at' => 'datetime'
+        'published_at' => 'datetime',
     ];
 }

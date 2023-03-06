@@ -19,8 +19,7 @@ class PostService
 
     public static function createNew(
         array|PostRequest $post
-    ): bool
-    {
+    ): bool {
         if (PostRepository::store($post)) {
             //log and notification to review post
             return true;

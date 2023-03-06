@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Http\Requests\Cms\PostRequest;
 use App\Models\Cms\Post;
+
 class PostRepository
 {
     public static function getFeaturedPosts()
