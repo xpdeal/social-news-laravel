@@ -3,7 +3,7 @@
 namespace App\Observers\Cms;
 
 use App\Models\Cms\Post;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class PostObserver
@@ -12,7 +12,7 @@ class PostObserver
     {
         $post->slug = Str::slug($post->title);
         $post->uuid = Str::uuid();
-        $post->user_id = 1;
+        $post->user_id = Auth::id();
     }
 
     /**
