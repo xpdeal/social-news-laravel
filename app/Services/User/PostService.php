@@ -7,8 +7,12 @@ use App\Repositories\PostRepository;
 
 class PostService
 {
+
+    public const USER_DASH_POSTS = 'dash.posts';
     public static function createNew(array|PostRequest $post)
     {
-        return PostRepository::store($post);
+        if (PostRepository::store($post)) {
+            //log and notification to review post
+        }
     }
 }

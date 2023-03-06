@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Http\Requests\Cms\PostRequest;
 use App\Models\Cms\Post;
 class PostRepository
 {
@@ -10,7 +11,7 @@ class PostRepository
         return Post::paginate(10);
     }
 
-    public static function store(array $data)
+    public static function store(array|PostRequest $data)
     {
         return Post::create($data);
     }

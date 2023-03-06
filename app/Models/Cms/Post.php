@@ -19,7 +19,7 @@ class Post extends Model
         'uuid',
         'title',
         'description',
-        'post',
+        'post_content',
         'metadata',
         'published_at',
         'slug'

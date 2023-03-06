@@ -12,7 +12,7 @@ class PostObserver
     {
         $post->slug = Str::slug($post->title);
         $post->uuid = Str::uuid();
-        $post->user_id = Auth::id();
+        $post->user_id = 1;
     }
 
     /**
