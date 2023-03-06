@@ -3,6 +3,7 @@
 namespace App\Observers\Cms;
 
 use App\Models\Cms\Post;
+use Auth;
 use Illuminate\Support\Str;
 
 class PostObserver
@@ -11,13 +12,14 @@ class PostObserver
     {
         $post->slug = Str::slug($post);
         $post->uuid = Str::uuid();
+        $post->user_id = Auth::id();
     }
+
     /**
      * Handle the Post "created" event.
      */
     public function created(Post $post): void
     {
-
     }
 
     /**
